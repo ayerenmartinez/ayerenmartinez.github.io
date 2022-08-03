@@ -1,0 +1,116 @@
+ html{
+    /*Hack para el problema del rem (ya que necesitas una calculadora para convertir de px a rem)*/
+    /*1rem = 10px*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+ }
+ *,*::before,*::after{
+    box-sizing: inherit;
+ }
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ :root{
+    --brightOrange:hsl(31,77%,52%);
+    --darkCyan:hsl(184,100%,22%);
+    --veryDarkCyan:hsl(179,100%,13%);
+    --transparentWhite:hsl(0,0%,100%,0.75);/*color para los parrafos*/
+    --veryLightGray:hsl(0,0%,95%);/*color para background, headings, buttons*/
+ }
+ body{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    background-color: var(--veryLightGray);
+ }
+.main-container{
+    /*border:1px solid black; /*codigo de ayuda */
+    width: 32.5rem;
+    margin: 87px auto 40px;
+    border-radius: 0.8rem;
+    overflow: hidden;/*sirve para que los elementos que están por encima del contenedor se escondan, y no pasen por encima del contenedor*/
+}
+article{
+    width: 100%;
+    height: 44rem;
+    padding: 4.8rem;
+}
+img{
+    margin-bottom: 3.6rem;
+}
+h2{
+    color: var(--veryLightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+p{
+    color:var(--transparentWhite);
+    line-height: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+input[type=submit]{
+    width: 14.8rem;
+    height: 4.6rem;
+    border-radius: 4.5rem;
+    border-style: none;
+    background-color: var(--veryLightGray);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+}
+#sedans-btn{
+    color:var(--brightOrange);
+}
+#sedans-btn:hover{
+    color:var(--veryLightGray);
+    cursor:pointer;
+    background-color: var(--brightOrange);
+    border:1px solid var(--veryLightGray);
+}
+#suvs-btn{
+    color:var(--darkCyan);
+}
+#suvs-btn:hover{
+    color:var(--veryLightGray);
+    cursor:pointer;
+    background-color: var(--darkCyan);
+    border:1px solid var(--veryLightGray);
+}
+#luxury-btn{
+    color:var(--veryDarkCyan);
+}
+#luxury-btn:hover{
+    color:var(--veryLightGray);
+    cursor:pointer;
+    background-color: var(--veryDarkCyan);
+    border:1px solid var(--veryLightGray);
+}
+#sedans{
+    background-color: var(--brightOrange);
+}
+#suvs{
+    background-color: var(--darkCyan);
+}
+#luxury{
+    background-color: var(--veryDarkCyan);
+}
+.attribution {
+    font-size: 11px; text-align: center;
+ }
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
+@media (min-width:944px) {
+    .main-container{
+        width: 92.4rem;
+        display: flex;
+        margin-top: 17rem;
+    }
+    article{
+        height: 50rem;
+    }
+    p{
+        margin-bottom: 8rem;
+    }
+}
